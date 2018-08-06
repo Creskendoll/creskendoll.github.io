@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build-scss:compile": "node-sass-chokidar --source-map true --output-style expanded scss/*.scss",
+    "build-scss:prefix": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "dev:build-scss": "npm-run-all -p build-scss:*",
+    "dev:watch-scss": "chokidar 'src/scss/**/*.scss' -c 'npm run dev:build-scss'",
+    "dev:watch-ts": "tsc -w",
+    "start:watch": "npm-run-all -p dev:*",
+    "start:server": "browser-sync start -s --ss 'dist' -f 'dist/**/*' --port 1991 --ui-port 1992",
+    "s": "run-p start:*"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "typescript": "^2.7.2"
+  }
+}
