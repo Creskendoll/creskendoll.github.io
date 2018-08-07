@@ -15,55 +15,67 @@
 
     </head>
 	<body>      
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row head">
                 <!--Pic and name-->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                     <h1 id="nameTitle" style="text-align: center;">Kenan Soylu</h1>
                     <img id="profilePic" src="./src/profile.jpg" alt="Profile Picture" style="width: 300px; height: 300px">
-                    <div class="contact">
-                        <div class="row">
-                            <div class="col-md-auto">
-                                <a href="mailto:ken.soylu@hotmail.com?Subject=Whats%20Poppin" target="_top">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-auto" style="align-content: center;">
-                                <a href="mailto:ken.soylu@hotmail.com?Subject=Whats%20Poppin" target="_top" style="font-size: 25px; text-align: center;">
-                                    ken.soylu@hotmail.com
-                                </a>
-                            </div>
+                    <div class="contacts">
+                        <!--E-mail button-->
+                        <div class="row btn btn-primary" onclick="window.open('mailto:ken.soylu@hotmail.com?Subject=Whats%20Poppin', '_top')">                            
+                            <a class="contact-icon">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                            <a class="contact-text">
+                                ken.soylu@hotmail.com
+                            </a>
                         </div>
-                        <div class="row">
-                                <div class="col-md-auto">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-auto" style="align-content: center;">
-                                    +905462561997
-                                </div>
+                        
+                        <!--Resume-->
+                        <div class="row btn btn-primary" onclick="window.open('src/KenanSoyluResume.pdf', '_blank')">
+                            <a class="contact-icon">
+                                <i class="fa fa-file-text"></i>
+                            </a>
+                            <a class="contact-text">
+                                RESUME  
+                            </a>                                    
+                        </div>
+
+                        <!--Phone-->
+                        <div class="row btn btn-primary" onclick="window.open('tel:+905462561997', '_top')">
+                            <a class="contact-icon">
+                                <i class="fa fa-phone"></i>
+                            </a>
+                            <a class="contact-text">
+                                +90 546 256 1997
+                            </a>
                         </div>
                     </div>
                 </div>
                 <!--paragraph and links-->
-                <div class="col-md-6 col-lg-8">
+                <div class="col-sm-12 col-md-6 col-lg-8">
                     <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum justo sit amet massa ultricies, id vulputate elit sagittis. 
                             Quisque id nulla turpis. Nunc bibendum nunc eu neque gravida, eu condimentum tortor venenatis. 
                             Etiam aliquam vulputate faucibus. Suspendisse placerat ac metus at mattis.
                             Integer nisl neque, feugiat at bibendum sit amet, maximus sed lectus. Donec ex magna, tempus bibendum nunc interdum, euismod consectetur tellus. Donec accumsan dignissim lectus.
                             Proin aliquam tincidunt odio, vulputate vulputate lacus lacinia lobortis. Etiam hendrerit placerat massa at efficitur.</p>
-                    <div class="links">
-                        <a href="https://www.instagram.com/creskendoll/?hl=en" target="_blank">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/kenan-soylu-4236b0132/" target="_blank">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://github.com/Creskendoll" target="_blank">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://drive.google.com/open?id=0Bx16vdI0UK6tdXoxcC05T09yakU" target="_blank">
-                            <i class="fa fa-camera" aria-hidden="true"></i>
-                        </a>
+                    
+                    <div class="row links-container">
+                        <div style="margin-left: auto; margin-right: auto;">
+                            <a class="col col-sm-6 col-md-6 link" href="https://www.instagram.com/creskendoll/?hl=en" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="col col-sm-6 col-md-6 link" href="https://www.linkedin.com/in/kenan-soylu-4236b0132/" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a class="col col-sm-6 col-md-6 link" href="https://github.com/Creskendoll" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a class="col col-sm-6 col-md-6 link" href="https://drive.google.com/open?id=0Bx16vdI0UK6tdXoxcC05T09yakU" target="_blank">
+                                <i class="fa fa-camera"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,10 @@
-{
+{   
+  "name": "githubio",
+  "version": "1.0.0",
   "scripts": {
-    "build-scss:compile": "node-sass-chokidar --source-map true --output-style expanded scss/*.scss",
-    "build-scss:prefix": "postcss dist/css/*.css --use autoprefixer -d dist/css",
-    "dev:build-scss": "npm-run-all -p build-scss:*",
-    "dev:watch-scss": "chokidar 'src/scss/**/*.scss' -c 'npm run dev:build-scss'",
-    "dev:watch-ts": "tsc -w",
+    "dev:watch-ts": "tsc -w js/script.js",
     "start:watch": "npm-run-all -p dev:*",
-    "start:server": "browser-sync start -s --ss 'dist' -f 'dist/**/*' --port 1991 --ui-port 1992",
+    "start:server": "browser-sync start --server --files='**/*' --port 1991 --ui-port 1992",
     "s": "run-p start:*"
   },
   "browserslist": [
@@ -21,5 +19,9 @@
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
     "typescript": "^2.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Creskendoll/creskendoll.github.io.git"
   }
 }
