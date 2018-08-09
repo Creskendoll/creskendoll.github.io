@@ -2,12 +2,11 @@
 <html>
 	<head>
         <meta charset=utf-8>
-        <meta http-equiv="Pragma" content="no-cache">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!--jquery-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
         <title>Kenan Soylu</title>
         <link rel="icon" href="src/power.png">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
@@ -25,14 +24,9 @@
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <h1 id="nameTitle" style="text-align: center;">Kenan Soylu</h1>
                     
-                    <div id="profilePicContainer" style="cursor: pointer;">
+                    <div id="profilePicContainer" class="row">
                         <div id="profilePic">
-                            <div class="front">
-                                <img id="profilePicFront" src="./src/profile.jpg" style="max-width: 100%; max-height: 100%;" alt="Profile Picture Front" >
-                            </div>
-                            <div class="back">                            
-                                <img id="profilePicBack" alt="Profile Picture Back" style="max-width: 100%; max-height: 100%;">
-                            </div>
+                            <img id="profileIMG" src="src/loading.gif" style="transform: translate(50%, 50%);" alt="Profile Picture" >
                         </div>
                     </div>
 
@@ -74,7 +68,8 @@
                             Quisque id nulla turpis. Nunc bibendum nunc eu neque gravida, eu condimentum tortor venenatis. 
                             Etiam aliquam vulputate faucibus. Suspendisse placerat ac metus at mattis.
                             Integer nisl neque, feugiat at bibendum sit amet, maximus sed lectus. Donec ex magna, tempus bibendum nunc interdum, euismod consectetur tellus. Donec accumsan dignissim lectus.
-                            Proin aliquam tincidunt odio, vulputate vulputate lacus lacinia lobortis. Etiam hendrerit placerat massa at efficitur.</p>
+                            Proin aliquam tincidunt odio, vulputate vulputate lacus lacinia lobortis. Etiam hendrerit placerat massa at efficitur.
+                    </p>
                     
                     <div class="row links-container">
                         <div style="margin-left: auto; margin-right: auto;">
@@ -95,6 +90,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid">
+            <h1 class="title">Photo Gallery</h1>
+            <div class="row">
+                <div class="col col-sm-12 col-md-1 col-lg-1" style="text-align: center;">
+                    <i class="fa fa-arrow-circle-left link" style="cursor: pointer;"></i>
+                </div>
+                <div id="gallery-items" class="col col-sm-12 col-md-10 col-lg-10">
+
+                </div>
+                <div class="col col-sm-12 col-md-1 col-lg-1" style="text-align: center;">
+                    <i class="fa fa-arrow-circle-right link" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -17,7 +17,15 @@ canvas {
 
   perspective :600px;
 	-webkit-perspective: 600px;
-    -moz-perspective: 600px;
+  -moz-perspective: 600px;
+}
+
+#profilePicContainer {
+  cursor: pointer;
+  width: 300px;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 #nameTitle {
@@ -75,6 +83,13 @@ canvas {
   font-family: 'IBM Plex Mono', Courier, monospace;
   align-content: center;
   text-shadow: 5px 3px 5px #155e84;
+}
+
+.title {
+  text-align: center;
+  font-family: 'IBM Plex Mono', Courier, monospace;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #155e84;
 }
 
 .btn {
