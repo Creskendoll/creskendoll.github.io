@@ -49,6 +49,7 @@ canvas {
   margin-top: 50px;
   font-size: 120%;
   font-family: 'IBM Plex Mono', Courier, monospace;
+  text-shadow: 2px 2px 8px #155e84;
 }
 
 .links-container {
@@ -83,13 +84,6 @@ canvas {
   font-family: 'IBM Plex Mono', Courier, monospace;
   align-content: center;
   text-shadow: 5px 3px 5px #155e84;
-}
-
-.title {
-  text-align: center;
-  font-family: 'IBM Plex Mono', Courier, monospace;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px #155e84;
 }
 
 .btn {
