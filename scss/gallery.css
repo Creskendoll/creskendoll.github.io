@@ -1,3 +1,9 @@
+.section {
+    border: 5px solid silver;
+    margin: auto;
+    border-radius: 25px;
+}
+
 #gallery-items {
     max-width: none !important;
     width: 3600px;
@@ -6,6 +12,7 @@
     left: 0px;
     display: block; 
     overflow: hidden;
+    display: -webkit-box;
     
     -webkit-transition: left 2s;
     -moz-transition: left 2s;
@@ -16,9 +23,9 @@
 .slider {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px;
     text-align: center;
     overflow: hidden;
+    border: 5px solid silver;
 }
 
 .gallery-arrow {
@@ -44,15 +51,17 @@
     text-align: center;
     font-family: 'IBM Plex Mono', Courier, monospace;
     font-weight: bold;
-    text-shadow: 2px 2px 8px #155e84;
+    color: black;
+    text-shadow: 2px 2px 8px silver;
 }
 
-#gallery-text {    
+#gallery-text {  
     text-align: center;
     font-family: 'IBM Plex Mono', Courier, monospace;
-    text-shadow: 2px 2px 8px #155e84;
+    text-shadow: 2px 2px 8px silver;
 }
 
+/*Overlay shown when clicked on image*/
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var maxSlidePx = 0;
     var thumbnailURLS = [];
-    var slideBy = 410;
+    var slideBy = 400;
 
     // reading the JSON and filling up the gallery with thumbnails
     var populateGallery = function () {
@@ -77,29 +77,33 @@ $(document).ready(function () {
         }); 
     });
 
-    var slideCoeff = 2;
+    var touchStartX = 0;
     $(document).on('touchstart', '.slider', function (ie) {
         // store the initial position the touch occurs
         var touchStart = ie.originalEvent.touches[0].pageX;
         var elmStart = $(this).offset();
-        var touchStartX = touchStart - elmStart.left;
+        touchStartX = touchStart - elmStart.left;
+      });
 
-        $(document).on('touchmove', '.slider', function (e) {
-            // find the movement relative to the initial touch
-            var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-            var elm = $(this).offset();
-            var x = touch.pageX - elm.left;
-            var y = touch.pageY - elm.top;
-            if(x < $(this).width() && x > 0){
-                if(y < $(this).height() && y > 0){
-                    //CODE GOES HERE
-                    // left is positive, right is negative offset 
-                    var offset = touchStartX - x;
-                    console.log('offset:' + offset);
-                }
-            } 
-        });
-      })
+      $(document).on('touchmove', '.slider', function (e) {
+        var slider = $("#gallery-items");
+        // find the movement relative to the initial touch
+        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+        var elm = $(this).offset();
+        var x = touch.pageX - elm.left;
+        var y = touch.pageY - elm.top;
+        if(x < $(this).width() && x > 0){
+            if(y < $(this).height() && y > 0){
+                //CODE GOES HERE
+                // left is positive, right is negative offset
+                
+                // pics moving right is in left(-) direction
+                var offset = touchStartX - x;
+                slider.css('left', offset+'px');
+                console.log('offset:' + offset);
+            }
+        } 
+    });
 
     // close the image overlay
     $(document).on("click", "span.close", function () {
