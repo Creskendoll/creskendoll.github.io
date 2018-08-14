@@ -4,7 +4,7 @@
   "scripts": {
     "dev:watch-ts": "tsc -w js/script.js",
     "start:watch": "npm-run-all -p dev:*",
-    "start:server": "browser-sync start --server --files='**/*' --port 1991 --ui-port 1992",
+    "start:server": "browser-sync start --server --files='./*.html, ./scss/*.css, ./js/*.js' --port 1997 --ui-port 1998",
     "s": "run-p start:*"
   },
   "browserslist": [

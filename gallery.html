@@ -1,5 +1,4 @@
 <div class="container-fluid">
-    <script src="./js/gallery.js"></script>
     <h1 class="title">Photo Gallery</h1>
     <p id="gallery-text">Selection of some pictures I've taken with a DSLR and edited using Lightroom.</p>
     <div class="row">
@@ -7,13 +6,21 @@
             <i class="fa fa-arrow-circle-left link" style="cursor: pointer;"></i>
         </div>
         <div class="col col-sm-12 col-md-10 col-lg-10 slider">
-            <div id="gallery-items" class="row" style="display: block; overflow: hidden;">
-                <ul class="ze_slides" style="max-width: none !important; overflow: hidden; width: 2400%; transition-duration: 0.6s; transform: translate3d(-1655px, 0px, 0px);">
-                </ul>
-            </div>
+            <div id="gallery-items" class="row"></div>
         </div>
         <div id="arrowRight" class="col col-sm-12 col-md-1 col-lg-1 gallery-arrow">
             <i class="fa fa-arrow-circle-right link" style="cursor: pointer;"></i>
         </div>
     </div>
+
+<!-- The Modal -->
+    <div id="modal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+      
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="modalIMG">
+        <img id="modal-loading" src="src/loading.gif">
+    </div>
+
 </div>

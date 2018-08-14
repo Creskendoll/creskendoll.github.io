@@ -1,9 +1,11 @@
 #gallery-items {
+    max-width: none !important;
     width: 3600px;
-    height: 600px;
     clear: both;
     position: relative;
     left: 0px;
+    display: block; 
+    overflow: hidden;
     
     -webkit-transition: left 2s;
     -moz-transition: left 2s;
@@ -25,15 +27,17 @@
     margin-bottom: auto;
 }
 
-.gallery-img {
+.galleryIMG {
     max-width: 400px;
-    max-height: 600px;
-    padding: 5px !important;
+    padding: 10px !important;
     cursor: pointer;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
-.gallery-img:hover {
+.galleryIMG:hover {
     opacity: 0.7;
+    transform: scale(1.1);
 }  
 
 .title {
@@ -47,4 +51,60 @@
     text-align: center;
     font-family: 'IBM Plex Mono', Courier, monospace;
     text-shadow: 2px 2px 8px #155e84;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding-bottom: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto !important; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;   
+    display: block;
+    max-width: 80%;
+    max-height: 1000px;    
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#modal-loading {
+    margin: auto;   
+    display: none;
+    height: 150px;
+    width: 150px;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
