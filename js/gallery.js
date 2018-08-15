@@ -99,7 +99,7 @@ $(document).ready(function () {
                 
                 // pics moving right is in left(-) direction
                 var offset = touchStartX - x;
-                slider.css('left', offset+'px');
+                slider.css('left', parseInt(slider.css('left'))-offset+'px');
                 console.log('offset:' + offset);
             }
         } 

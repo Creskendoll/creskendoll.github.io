@@ -13,9 +13,9 @@
         <link rel="icon" href="src/power.png">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
         <!--local css-->
-        <link href="./scss/style.css" rel="stylesheet">
-        <link href="./scss/gallery.css" rel="stylesheet">
-        <link href="./scss/anim.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/gallery.css" rel="stylesheet">
+        <link href="./css/playlist.css" rel="stylesheet">
         <!--fa-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -23,16 +23,22 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
 	<body>      
-        <div class="container-fluid" style="height: 100%; display: table;">
-            <div class="row row-centered" style="float: none; margin: 0 auto; height: 100%; padding-bottom: 30px; padding-top: 20px;">
+        <div class="jumbotron" style="height: 100%; display: table; background: cornflowerblue; padding: 2rem 1rem !important;">
+            <div class="row row-centered" style="float: none; margin: 0 auto;">
             <div class="col-lg-1"></div>
                 <div class="col-lg-10 col-centered top-content">
                 <!--Pic and name-->
                 <div id="self-container" class="col-sm-12 col-md-12 col-lg-3">
                     <h1 id="nameTitle" style="text-align: center;">Kenan Soylu</h1>
                     
-                    <div id="profilePicContainer" class="row">
+                    <div id="profilePicContainer">
                         <div id="profilePic">
+                            <img id="profilePicLoading" src="src/loading.gif" alt="Loading..." style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: none;">
                             <img id="profileIMG" src="src/loading.gif" style="transform: translate(50%, 50%);" alt="Profile Picture" >
                         </div>
                     </div>
@@ -79,34 +85,36 @@
                     </p>
                     
                     <div class="row links-container">
-                        <div style="margin-left: auto; margin-right: auto;">
-                            <a class="col col-sm-6 col-md-6 link" href="https://www.instagram.com/creskendoll/?hl=en" target="_blank">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                            <a class="col col-sm-6 col-md-6 link" href="https://www.linkedin.com/in/kenan-soylu-4236b0132/" target="_blank">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a class="col col-sm-6 col-md-6 link" href="https://github.com/Creskendoll" target="_blank">
-                                <i class="fa fa-github"></i>
-                            </a>
-                            <a class="col col-sm-6 col-md-6 link" href="https://drive.google.com/open?id=0Bx16vdI0UK6tdXoxcC05T09yakU" target="_blank">
-                                <i class="fa fa-camera"></i>
-                            </a>
-                        </div>
+                        <a class="col link" href="https://www.instagram.com/creskendoll/?hl=en" target="_blank">
+                            <i class="fa fa-instagram link-inner"></i>
+                        </a>
+                        <a class="col link" href="https://www.linkedin.com/in/kenan-soylu-4236b0132/" target="_blank">
+                            <i class="fa fa-linkedin link-inner"></i>
+                        </a>
+                        <a class="col link" href="https://github.com/Creskendoll" target="_blank">
+                            <i class="fa fa-github link-inner"></i>
+                        </a>
+                        <a class="col link" href="https://drive.google.com/open?id=0Bx16vdI0UK6tdXoxcC05T09yakU" target="_blank">
+                            <i class="fa fa-camera link-inner"></i>
+                        </a>
                     </div>
                 </div>
                 </div>
             <div class="col-lg-1"></div>
             </div>
+            <a class="col" style="margin: 0 auto; text-align: center; bottom: 0.5rem;position: absolute; left:-100px;right:-100px;">
+                <img id="downArrow" src="src/arrow-down.gif" alt="Down Arrow" style="cursor: pointer;height: 90px; width: 50%;">
+            </a>
         </div>
 
         <script>$(document).ready(function () {$("#gallery").load('./gallery.html');});</script>
-        <div id="gallery" class="row"></div>
+        <div id="gallery" class="row" style="display: contents; background:cornflowerblue;"></div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="./js/three.js"></script>  
         <script src="./js/script.js"></script>  
         <script src="./js/gallery.js"></script>
+        <script src="./js/playlist.js"></script>
 	</body>
 </html>
 

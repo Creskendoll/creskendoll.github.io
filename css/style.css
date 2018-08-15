@@ -2,10 +2,12 @@ body {
   margin: 0px;
   background-color: cornflowerblue !important;
   height: 100%;
+  width: 100%;
 }
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 canvas {
@@ -16,7 +18,7 @@ canvas {
   background: url('../src/metal-texture.jpg');
   border-radius: 25px;
   border: 5px silver solid;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   margin: 0 auto;
   margin-left: 0px;
@@ -27,9 +29,8 @@ canvas {
   background: steelblue;
   border-radius: 25px;
   border: 3px silver solid;
-  padding-bottom: 20px;
-  margin: auto;
   margin-right: 0px;
+  display: flex;
 }
 
 #profilePic {
@@ -44,6 +45,13 @@ canvas {
   perspective :600px;
 	-webkit-perspective: 600px;
   -moz-perspective: 600px;
+}
+
+#profilePicLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #profilePicContainer {
@@ -76,17 +84,22 @@ canvas {
 }
 
 .paragraph {
-  margin-top: 50px;
-  font-size: 120%;
+  margin-top: 15px;
+  font-size: 130%;
   color: black;
   font-weight: bold;
   font-family: 'IBM Plex Mono', Courier, monospace;
   text-shadow: 2px 2px 1px silver;
 }
 
+
+/*TODO: Fix the links*/
 .links-container {
-  display: flex;
-  align-items: center
+  position: absolute;
+  bottom: 20px;
+  display: grid;
+  align-items: center;
+  width: 100%;
 }
 
 .link {
@@ -94,6 +107,11 @@ canvas {
   font-size: 50px;
   text-decoration: none;
   text-shadow: 3px 3px 3px silver;
+}
+
+.link-inner {
+  display: table !important;
+  margin: auto;
 }
 
 .contacts {

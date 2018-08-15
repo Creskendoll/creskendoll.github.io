@@ -34,8 +34,10 @@ var setNewPic = function (img) {
                 console.log("Couldn't fetch image: ", newPicURL);
                 var defaultPic = $("<img />").attr({id: "profileIMG", src: "../src/profile.jpg", style: "max-width: 100%; max-height: 100%;", alt: "Profile Picture"}) 
                 replacePic(img.attr('id'), defaultPic);
+                $("#profilePicLoading").css('display', 'none');
             } else {
                 replacePic(img.attr('id'), img);
+                $("#profilePicLoading").css('display', 'none');
             }
         });
     }
@@ -91,7 +93,26 @@ $(document).ready(function () {
     });
 
     $("#profilePicContainer").click(function (e) {
+        $("#profilePicLoading").css('display', '');
         // change picture 
         setNewPic($("#profileIMG"));
     });
+
+    $("#downArrow").mouseover(function (e) {
+        console.log('hover')
+        $('html, body').animate({
+            scrollTop: $(this).offset().top
+        }, 1000, function(e, f, a, h, g) {
+            if (f == 0) {
+                return a
+            }
+            if (f == g) {
+                return a + h
+            }
+            if ((f /= g / 2) < 1) {
+                return h / 2 * Math.pow(2, 10 * (f - 1)) + a
+            }
+            return h / 2 * (-Math.pow(2, -10 * --f) + 2) + a
+        });
+      });
 });
