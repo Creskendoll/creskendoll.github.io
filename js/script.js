@@ -61,8 +61,9 @@ var getMouseRelativePosition = function (elem, e) {
     
     var parentOffset = elem.offset(); 
     var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
 
-    return relX;
+    return [relX, relY];
 }
 
 
@@ -76,11 +77,12 @@ $(document).ready(function () {
         
         var pic = $('#profilePic')
 
-        var relX = getMouseRelativePosition($(this), e);
+        var rel = getMouseRelativePosition($(this), e);
 
-        var rotation = ( relX - Math.abs (pic.width()) + pic.width()/2 ) / (pic.width()/4 - (-pic.width()/4))*rotateBy
+        var rotationX = ( rel[0] - Math.abs (pic.width()) + pic.width()/2 ) / (pic.width()/4 - (-pic.width()/4))*rotateBy
+        var rotationY = ( rel[1] - Math.abs (pic.width()) + pic.width()/2 ) / (pic.width()/4 - (-pic.width()/4))*rotateBy
 
-        pic.css({"z-index": 9, "-webkit-transform": "rotateY("+rotation+"deg)", "-moz-transform": "rotateY("+rotation+"deg)"})
+        pic.css({"z-index": 9, "-webkit-transform": 'rotateY('+rotationX+'deg)' + 'rotateX('+rotationY+'deg)', "-webkit-transform": "rotateX("+rotationY+"deg)" + "rotateY("+rotationX+"deg)"})
     });
 
     $("#profilePicContainer").mouseleave(function (e) {
@@ -88,8 +90,8 @@ $(document).ready(function () {
         var pic = $("#profilePic")
 
         pic.css({"z-index": 9, 
-                 "-webkit-transform": "rotateX("+0+"deg)",
-                 "-moz-transform": "rotateX("+0+"deg)"});
+                 "-webkit-transform": "rotateX("+0+"deg)" + 'rotateY('+0+'deg)',
+                 "-moz-transform": "rotateX("+0+"deg)" + 'rotateY('+0+'deg)'});
     });
 
     $("#profilePicContainer").click(function (e) {
@@ -99,7 +101,6 @@ $(document).ready(function () {
     });
 
     $("#downArrow").mouseover(function (e) {
-        console.log('hover')
         $('html, body').animate({
             scrollTop: $(this).offset().top
         }, 1000, function(e, f, a, h, g) {
