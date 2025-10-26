@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        <title>Kenan Soylu</title>
+
+        <link rel="icon" href="src/power.png">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+        <!--local css-->
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/gallery.css" rel="stylesheet">
+        <link href="./css/coding.css" rel="stylesheet">
+        <!--fa-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+	<body>      
+        <div class="jumbotron" style="height: 100%; display: table; background: cornflowerblue; padding: 2rem 1rem !important;">
+            <div class="row row-centered" style="float: none; margin: 0 auto;">
+            <div class="col-lg-1"></div>
+                <div class="col-lg-10 col-centered top-content">
+                <!--Pic and name-->
+                <div id="self-container" class="col-sm-12 col-md-12 col-lg-3">
+                    <h1 id="nameTitle" style="text-align: center;">Kenan Soylu</h1>
+                    
+                    <div id="profilePicContainer">
+                        <div id="profilePic">
+                            <img id="profilePicLoading" src="src/loading.gif" alt="Loading..." style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: none;">
+                            <img id="profileIMG" src="src/loading.gif" style="transform: translate(50%, 50%);" alt="Profile Picture" >
+                        </div>
+                    </div>
+
+                    <div class="contacts">
+                        <!--E-mail button-->
+                        <div class="row btn btn-primary" onclick="window.open('mailto:ken.soylu@hotmail.com?Subject=Whats%20Poppin', '_top')">                            
+                            <a class="contact-icon">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                            <a class="contact-text">
+                                    ken.soylu@hotmail.com
+                            </a>
+                        </div>
+                        
+                        <!--Resume-->
+                        <div class="row btn btn-primary" onclick="window.open('src/KenanSoyluResume.pdf', '_blank')">
+                            <a class="contact-icon">
+                                <i class="fa fa-file-text"></i>
+                            </a>
+                            <a class="contact-text">
+                                RESUME  
+                            </a>                                    
+                        </div>
+
+                        <!--Phone-->
+                        <div class="row btn btn-primary" onclick="window.open('tel:+905462561997', '_top')">
+                            <a class="contact-icon">
+                                <i class="fa fa-phone"></i>
+                            </a>
+                            <a class="contact-text">
+                                +90 546 256 1997
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--paragraph and links-->
+                <div id="info-container" class="col-sm-12 col-md-12 col-lg-7">
+                    <p class="paragraph">
+                        Hey there, I'm Kenan, an enthusiast of software, music and photography. I enjoy building small software, DIY projects as well as taking and editing photos and videos in my free time.
+                        I'm always up for a project of any kind so hit me up if you're looking for acquaintances or just want to say hi. My interests include machine learning, data mining, backend design, game development and coffee.  
+                        Currently doing my software development bachelors at Bahçeşehir University in Istanbul.  
+                    </p>
+                    
+                    <div class="row links-container">
+                        <a class="col link" href="https://www.instagram.com/creskendoll/?hl=en" target="_blank">
+                            <i class="fab fa-instagram link-inner"></i>
+                        </a>
+                        <a class="col link" href="https://www.linkedin.com/in/kenan-soylu-4236b0132/" target="_blank">
+                            <i class="fab fa-linkedin link-inner"></i>
+                        </a>
+                        <a class="col link" href="https://github.com/Creskendoll" target="_blank">
+                            <i class="fab fa-github link-inner"></i>
+                        </a>
+                        <a class="col link" href="https://soundcloud.com/kenan-soylu" target="_blank">
+                            <i class="fab fa-soundcloud link-inner"></i>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            <div class="col-lg-1"></div>
+            </div>
+            <div class="col d-none d-md-block" style="margin: 0 auto; text-align: center; bottom: 0.5rem; position: absolute;">
+                <img id="downArrow" src="src/arrow-down.gif" alt="Down Arrow" style="cursor: pointer;height: 90px; width: 50%;">
+            </div>
+        </div>
+
+        <script>$(document).ready(function () {$("#gallery").load('./gallery.html');});</script>
+        <div id="gallery" class="row" style="display: contents; background:cornflowerblue;"></div>
+
+        <script>$(document).ready(function () {$("#coding").load('./coding.html');});</script>
+        <div id="coding" class="row" style="display: contents; background:cornflowerblue;"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="./js/three.js"></script>  
+        <script src="./js/script.js"></script>  
+        <script src="./js/gallery.js"></script>
+        <script src="./js/coding.js"></script>
+	</body>
+</html>
+
